@@ -1,5 +1,6 @@
 from src.analyze_log import (
     most_frequent,
+    meals_never_ordered,
 )
 
 
@@ -32,7 +33,8 @@ class TrackOrders:
         return most_frequent(self.registry[customer]["meals"])
 
     def get_never_ordered_per_customer(self, customer):
-        pass
+        return meals_never_ordered(
+            self.registry[customer]["meals"])
 
     def get_days_never_visited_per_customer(self, customer):
         pass

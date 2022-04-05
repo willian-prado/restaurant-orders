@@ -1,3 +1,7 @@
+from read_csv import read_csv
+import os.path
+
+
 def most_frequent(arr):
     frequencies = {}
     most_frequent = arr[0]
@@ -23,5 +27,21 @@ def meals_never_ordered(meals):
     return all_meals.difference(set(meals))
 
 
+def days_never_visited(days):
+    all_days = set(["terça-feira", "segunda-feira", "sabado"])
+    return all_days.difference(set(days))
+
+
 def analyze_log(path_to_file):
-    raise NotImplementedError
+    if path_to_file.endswith("csv"):
+        if os.path.exists(path_to_file):
+            orders = read_csv(path_to_file)
+            with open("data/mkt_campaign.txt", "w") as file:
+                print(most_frequent(orders["maria"]["meals"]), file=file)
+                print(burguer_count(orders["arnaldo"]["meals"]), file=file)
+                print(meals_never_ordered(orders["joao"]["meals"]), file=file)
+                print(days_never_visited(orders["joao"]["days"]), file=file)
+        else:
+            raise FileNotFoundError(f"Arquivo inexistente: '{path_to_file}'")
+    else:
+        raise FileNotFoundError(f"Extensão inválida: '{path_to_file}'")

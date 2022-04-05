@@ -18,5 +18,10 @@ def burguer_count(meals):
     return len(burguers)
 
 
+def meals_never_ordered(meals):
+    all_meals = set(["hamburguer", "pizza", "coxinha", "misto-quente"])
+    return all_meals.difference(set(meals))
+
+
 def analyze_log(path_to_file):
     raise NotImplementedError

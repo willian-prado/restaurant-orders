@@ -13,5 +13,10 @@ def most_frequent(arr):
     return most_frequent
 
 
+def burguer_count(meals):
+    burguers = [meal for meal in meals if meal == "hamburguer"]
+    return len(burguers)
+
+
 def analyze_log(path_to_file):
     raise NotImplementedError

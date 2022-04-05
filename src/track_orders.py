@@ -1,3 +1,8 @@
+from src.analyze_log import (
+    most_frequent,
+)
+
+
 class TrackOrders:
     def __init__(self):
         self.orders = 0
@@ -24,7 +29,7 @@ class TrackOrders:
             self.open_days[day] += 1
 
     def get_most_ordered_dish_per_customer(self, customer):
-        pass
+        return most_frequent(self.registry[customer]["meals"])
 
     def get_never_ordered_per_customer(self, customer):
         pass

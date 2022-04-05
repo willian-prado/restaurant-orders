@@ -1,4 +1,4 @@
-from read_csv import read_csv
+from src.read_csv import read_csv
 import os.path
 
 

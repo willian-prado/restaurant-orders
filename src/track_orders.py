@@ -46,4 +46,4 @@ class TrackOrders:
         return max(self.open_days, key=self.open_days.get)
 
     def get_least_busy_day(self):
-        pass
+        return min(self.open_days, key=self.open_days.get)

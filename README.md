@@ -1,11 +1,10 @@
-## Projeto Algorithms
+## Projeto Restaurant Orders
 
 > Quinto projeto do módulo de Ciência da Computação do curso de desenvolvimento web da Trybe.
 
 **Contexto**
 
-Os dois últimos blocos do curso são focados no estudo mais aprofundado das estruturas de dados que temos utilizado desde o início.
-Neste projeto, praticamos dois desses tipos de dados: os Hash maps e os Sets.
+Os dois últimos blocos do curso são focados no estudo mais aprofundado das estruturas de dados que temos utilizado desde o início de nossa jornada na Trybe. Neste projeto, praticamos com dois desses tipos de dados: os Hash maps e os Sets.
 
 **Objetivo do projeto**
 

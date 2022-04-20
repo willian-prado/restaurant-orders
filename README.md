@@ -1,224 +1,32 @@
-### Termos e acordos
+## Projeto Algorithms
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do
-Manual da Pessoa Estudante da Trybe.
+> Quinto projeto do módulo de Ciência da Computação do curso de desenvolvimento web da Trybe.
 
-# Boas vindas ao repositório do projeto Restaurant Orders!
+**Contexto**
 
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
+Os dois últimos blocos do curso são focados no estudo mais aprofundado das estruturas de dados que temos utilizado desde o início.
+Neste projeto, praticamos dois desses tipos de dados: os Hash maps e os Sets.
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
+**Objetivo do projeto**
 
----
+Uma lanchonete possui um sistema de faturamento dos pedidos dos clientes, que salva o nome da pessoa, o pedido realizado, e dia do atendimento (dia da semana). O projeto consiste em ajudar a lanchonete a melhorar esse sistema para que ele possibilite extração de relatórios e, num segundo momento, a controlar seu estoque. 
 
-# Sumário
+**Principais habilidades desenvolvidas nesse trabalho**
 
-- [Habilidades](#habilidades)
-- [Entregáveis](#entregáveis)
-  - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
-  - [Desenvolvimento](#desenvolvimento)
-  - [Data de Entrega](#data-de-entrega)
-- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
-  - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
-  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-- [Como desenvolver](#como-desenvolver)
-  - [Linter](#linter)
-- [Requisitos do projeto](#requisitos-do-projeto)
+  - Trabalhar com as estruturas de dados Hash map (Dict) e Set
+  - Trabalhar com classes e manipulação de arquivos
 
-    `Requisitos obrigatórios:`
-    - [1 - Campanha de publicidade, implemente um método chamado analyze_log no módulo src/analyze_log.py que gere informações de uma lanchonete.](#1---campanha-de-publicidade-implemente-um-método-chamado-analyze_log-no-módulo-srcanalyze_logpy-que-gere-informações-de-uma-lanchonete)
-    - [2 - Análises contínuas, implemente a classe TrackOrders que gere informações contínuas de uma lanchonete.](#2---análises-contínuas-implemente-a-classe-trackorders-que-gere-informações-contínuas-de-uma-lanchonete)
-    
-    `Requisitos bônus:`
-    - [3 - Controle de estoque](#3---controle-de-estoque)
-    - [4 - Estoque pode acabar](#4---estoque-pode-acabar)
-- [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
-- [Revisando um pull request](#revisando-um-pull-request)
-- [Avisos Finais](#avisos-finais)
+**Tecnologia utilizada**
+
+- <a href="https://www.python.org"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" title="Python" height="35" align="center"/> - Python</a> 
 
 ---
 
-## Habilidades
+### Lista de requisitos propostos pela Trybe:
 
-- Trabalhar com Hash map e Dict
+#### Obrigatórios
 
-- Trabalhar com Set
-
----
-
-## Entregáveis
-
-Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório. Este _Pull Request_ deverá conter os arquivos do diretório `src` devidamente preenchidos de acordo com as instruções, que conterão seu código `Python` e seus testes, respectivamente.
-
-### ⚠️ É importante que seus arquivos tenham exatamente os nomes definidos dentro do diretório src! ⚠️
-
-Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria.
-
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
-
----
-
-## O que deverá ser desenvolvido
-
-A lanchonete Pão na Chapa, atualmente, possui um sistema de faturamento dos pedidos dos clientes, que salva o nome da pessoa, o pedido realizado, e dia do atendimento (dia da semana). O projeto consiste em ajudar a lanchonete a melhorar esse sistema para que ele possibilite extração de relatórios e, num segundo momento, a controlar seu estoque.
-
-O projeto está estruturado em duas etapas obrigatórias, e a tarefa bônus, também em duas etapas, totalizando 4 requisitos. Foque nas etapas obrigatórias e com o mesmo cuidado que teria com um cliente real: código limpo, com boa manutenção e legibilidade.
-
----
-
-## Data de Entrega
-
-  - Será `1` dia de projeto.
-  - Data de entrega para avaliação final do projeto: `06/04/2022 14:00`.
-
----
-
-## Instruções para entregar seu projeto:
-
-### ANTES DE COMEÇAR A DESENVOLVER:
-
-1. Clone o repositório
-
-- `git clone git@github.com:tryber/sd-012-restaurant-orders.git`.
-- Entre na pasta do repositório que você acabou de clonar:
-  - `sd-012-restaurant-orders`
-
-2. Crie o ambiente virtual para o projeto
-
-- `python3 -m venv .venv && source .venv/bin/activate`
-
-3. Instale as dependências
-
-- `python3 -m pip install -r dev-requirements.txt`
-
-- Caso tenha algum problema de instalação das dependências, tente instalar a biblioteca `wheel` e depois execute o comando anterior novamente
-- `python3 -m pip install wheel`
-
-4. Crie uma branch a partir da branch `master`
-
-- Verifique que você está na branch `master`
-  - Exemplo: `git branch`
-- Se não estiver, mude para a branch `master`
-  - Exemplo: `git checkout master`
-- Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-  - Você deve criar uma branch no seguinte formato: `nome-github-nome-do-projeto`
-  - Exemplo: `git checkout -b exemplo-project-name`
-
-5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-
-- Verifique que as mudanças ainda não estão no _stage_
-  - Exemplo: `git status` (deve aparecer listada a pasta _exemplo_ em vermelho)
-- Adicione o novo arquivo ao _stage_ do Git
-  - Exemplo:
-    - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-    - `git status` (deve aparecer listado o arquivo _exemplo/README.md_ em verde)
-- Faça o `commit` inicial
-  - Exemplo:
-    - `git commit -m 'iniciando o projeto project-name'` (fazendo o primeiro commit)
-    - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-6. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-- Usando o exemplo anterior: `git push -u origin exemplo-project-name`
-
-7. Crie um novo `Pull Request` _(PR)_
-
-- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-012-restaurant-orders/pulls)
-- Clique no botão verde _"New pull request"_
-- Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-- Clique no botão verde _"Create pull request"_
-- Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-- **Não se preocupe em preencher mais nada por enquanto!**
-- Volte até a página de _Pull Requests_ do repositório e confira que o seu _Pull Request_ está criado
-
----
-
-### Durante o desenvolvimento
-
-- Faça `commits` das alterações que você fizer no código regularmente
-
-- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
-
-- Os comandos que você utilizará com mais frequência são:
-  1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-  2. `git add` _(para adicionar arquivos ao stage do Git)_
-  3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
----
-
-## Como desenvolver
-
-**Estrutura do repositório**
-
-- No diretório `src/` você vai encontrar os arquivos onde devem ser implementadas todas as classes e métodos que você considerar importantes para resolver cada etapa do projeto;
-
-- No diretório `data/` você vai encontrar os arquivos de _log_ que deverão ser utilizados em cada etapa;
-
-- Os testes devem ser implementados nos arquivos do diretório `tests/`.
-
-## Testes
-
-Para executar os testes, lembre-se de primeiro **criar e ativar o ambiente virtual**, além de também instalar as dependências do projeto. Isso pode ser feito através dos comandos:
-
-```bash
-$ python3 -m venv .venv
-
-$ source .venv/bin/activate
-
-$ python3 -m pip install -r dev-requirements.txt
-```
-
-**Instalação de dependências**
-
-O arquivo `dev-requirements.txt` contém todos as dependências que serão utilizadas no projeto
-
-Se quiser saber mais sobre a instalação de dependências com `pip`, veja esse [artigo.](https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1)
-
-## Rodando os testes localmente
-
-Para verificar se o seu projeto está correto basta executar o seguinte comando:
-
-```bash
-$ python3 -m pytest
-```
-Para fazer um teste que para ao encontrar o primeiro erro coloque `-x` ao final do comando
-
-```bash
-$ python3 -m pytest -x
-```
-
-Para rodar um arquivo de testes específico use (exemplo)
-
-```bash
-$ python3 -m pytest tests/test_analyze_log.py
-```
-Para fazer um teste baseado no nome (pode ser parte do nome) use `-k` seguido do nome (exemplo)
-
-```bash
-$ python3 -m pytest -k test_validate_content_of_generated_file
-```
-
-
-## Linter
-
-Para verificar se você está seguindo o guia de estilo do Python corretamente, execute o comando:
-
-```bash
-$ python3 -m flake8
-```
-Para corrigir a maior parte dos erros de Linter automaticamente use 
-
-```bash
-$ python3 -m black nome_do_arquivo.py
-```
-
----
-
-## Requisitos obrigatórios:
-
-### 1 - Campanha de publicidade, implemente um método chamado `analyze_log` no módulo `src/analyze_log.py` que gere informações de uma lanchonete.
+#### 1 - Campanha de publicidade, implemente um método chamado `analyze_log` no módulo `src/analyze_log.py` que gere informações de uma lanchonete.
 
 A lanchonete quer promover ações de marketing e, para isso, a agência de publicidade precisa exatamente das informações abaixo:
 
@@ -274,22 +82,9 @@ hamburguer
 
 - Utilização correta de `Dict/Set`, vistos no módulo;
 
-- Código legível e modularizado, quando for o caso.
+- Faça um código legível e modularizado, quando for o caso.
 
-##### As seguintes verificações serão feitas:
-
-- 1.1 - Será validado se, ao executar o método `analyze_log`, os dados são preenchidos de forma correta no arquivo `data/mkt_campaign.txt`
-
-- 1.2 - Será validado se, ao executar o método `analyze_log` com um arquivo inexistente, o método retorna um erro `FileNotFoundError` com a mensagem de erro abaixo:
-  ```
-  "Arquivo inexistente: '{nome_do_arquivo}'"
-  ```
-- 1.3 - Será validado se, ao executar o método `analyze_log` com uma extensão inválida, o método retorna um erro com a mensagem abaixo:
-  ```
-  "Extensão inválida: '{nome_do_arquivo}'"
-  ```
-  
-### 2 - Análises contínuas, implemente a classe `TrackOrders` que gere informações contínuas de uma lanchonete.
+#### 2 - Análises contínuas, implemente a classe `TrackOrders` que gere informações contínuas de uma lanchonete.
 
 A campanha de marketing foi um sucesso! A gerência agora deseja um sistema que mantenha um registro contínuo dessas informações. Mais especificamente, desejam que o sistema permita a extração das seguintes informações a qualquer momento:
 
@@ -314,7 +109,6 @@ Para isso, você deverá implementar uma classe que entregue as informações ac
 - O arquivo `src/main.py` é apenas auxiliar e faz a leitura do arquivo `csv` especificado e envia a informação de cada pedido para as classes `TrackOrders` e para a classe `InventoryControl`, ao mesmo tempo. Não se preocupe ainda com o arquivo `inventory_control.py` (classe InventoryControl), pois ele é necessário apenas para a realização dos requisitos bônus.
 
 - Ainda no arquivo `src/main.py`, após a leitura completa do arquivo `csv`, algumas informações são impressas na tela para que você observe o comportamento das classes.
-
 
 **Teste o comportamento do arquivo `main.py`**
 
@@ -359,27 +153,9 @@ class TrackOrders:
 
 - Os métodos atingem complexidade ótima (geralmente `O(1)` ou `O(n)`, em alguns métodos que usam `Set`).
 
-##### As seguintes verificações serão feitas:
+#### Bônus:
 
-- 2.1 - Será validado se, ao instanciar a classe `TrackOrders` pela primeira vez, o método `len()` retorna a quantidade de pedidos igual a zero.
-
-- 2.2 - Será validado se, ao executar o método `add_new_order`, o método registra um pedido na instância.
-
-- 2.3 - Será validado se, ao executar `get_most_ordered_dish_per_customer`, o método retorna o prato mais pedido.
-
-- 2.4 - Será validado se, ao executar `get_never_ordered_per_customer`, o método retorna o conjunto de pratos que a pessoa nunca pediu.
-
-- 2.5 - Será validado se, ao executar `get_days_never_visited_per_customer`, o método retorna o conjunto de dias que a pessoa nunca visitou.
-
-- 2.6 - Será validado se, ao executar o método `get_busiest_day`, o método retorna o dia mais movimentado.
-
-- 2.7 - Será validado se, ao executar o método `get_least_busy_day`, o método retorna o dia menos movimentado.
-
----
-
-## Requisitos bônus:
-
-### 3 - Controle de estoque
+#### 3 - Controle de estoque
 
 Atualmente o controle de estoque de ingredientes é feito no caderninho. Ao final da semana, uma pessoa conta quantas unidades, de cada ingrediente, ainda restam no estoque e anota quantos precisam ser comprados, para completar o estoque mínimo de cada ingrediente.
 
@@ -435,15 +211,7 @@ class InventoryControl:
 
 - Os métodos atingem complexidade ótima (geralmente `O(1)` ou `O(n)`, em alguns métodos que usam `Set`).
 
-##### As seguintes verificações serão feitas:
-
-- 3.1 - Será validado se, ao executar o método `get_quantities_to_buy`, o método retorna a quantidade de ingredientes que precisam ser comprados.
-
-- 3.2 - Será validado se, ao executar o método `get_quantities_to_buy` para todos os hambúrgueres, o método retorna a quantidade de ingredientes que precisam ser comprados.
-
-- 3.3 - Será validado se, ao executar o método `get_quantities_to_buy` para receitas diferentes, o método retorna a quantidade de ingredientes que precisam ser comprados.
-
-### 4 - Estoque pode acabar
+#### 4 - Estoque pode acabar
 
 As campanhas de marketing tiveram sucesso novamente, e atraíram muitas novas pessoas clientes para a lanchonete. Se antes os estoques mínimos eram sempre suficientes para uma semana, agora não são mais...
 
@@ -488,43 +256,3 @@ Altere o arquivo `main.py`:
 
 - Os métodos fazem uso das técnicas de `Dict` e `Set` vistos no módulo;
 
-##### As seguintes verificações serão feitas:
-
-- 4.1 - Será validado se, ao executar o método `add_new_order` para um pedido com prato que não possui ingrediantes suficientes em estoque, o método retorna `False` sem registrar o pedido.
-
-- 4.2 - Será validado se, ao executar o método `get_available_dishes`, o método retorna todos os pratos que possuem ingredientes suficientes para seu preparo.
-
-- 4.3 - Será validado se, ao executar o método `get_available_dishes`, o método não retorna os pratos cujos ingredientes não sejam suficientes para seu preparo.
-
----
-
-## Depois de terminar o desenvolvimento
-
-Para **"entregar"** seu projeto, siga os passos a seguir:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-012`
-
-Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-⚠ Lembre-se que garantir que todas as _issues_ comentadas pelo **Lint** estão resolvidas! ⚠
-
----
-
-### Revisando um pull request
-
-À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
-
-Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
-
-# Avisos Finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
-
----

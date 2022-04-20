@@ -1,6 +1,6 @@
 ## Projeto Restaurant Orders
 
-> Quinto projeto do módulo de Ciência da Computação do curso de desenvolvimento web da Trybe.
+> Quinto projeto do módulo de Ciência da Computação do curso de desenvolvimento web da [Trybe](https://www.betrybe.com/)
 
 **Contexto**
 
@@ -255,3 +255,6 @@ Altere o arquivo `main.py`:
 
 - Os métodos fazem uso das técnicas de `Dict` e `Set` vistos no módulo;
 
+---
+
+[Ir para a lista de projetos](https://github.com/willian-prado/trybe-records)
